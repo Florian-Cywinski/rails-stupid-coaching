@@ -1,16 +1,15 @@
 <h1>Stupid Coaching</h1>
 
-<h3>-You</h3>
+<blockquote>
+  <p>
+    <%= @question %> <!-- Comes from the ask.html.erb page through the controller -->
+  </p>
+  <cite>You</cite>
+</blockquote>
 
-<%=@question%>
+<blockquote class="coach">
+  <p><%= @answer %></p> <!-- Comes directly from the controller (answer method) -->
+  <cite>Your coach</cite>
+</blockquote>
 
-
-
-
-<h3>-Your coach</h3>
-
-<%=@answer%>
-<br>
-<br>
-<%# <a href="/ask">Ask a new question</a> %>
-<%= link_to "Ask a new question", ask_path %>
+<%= link_to "Ask a new question", ask_path %> <!-- Back link to the ask.html.erb page -->

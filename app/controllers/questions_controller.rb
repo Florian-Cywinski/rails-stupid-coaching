@@ -1,16 +1,16 @@
 class QuestionsController < ApplicationController
-  # def home
-  # end
+  def home
+  end
 
-  # def ask
-  # end
+  def ask
+  end
 
   def answer
     @question = params[:question]
     # .include?"hello"
     if @question == 'I am going to work'
       @answer = 'Great!'
-    elsif @question.include? '?'
+    elsif @question.ends_with?('?')
       @answer = 'Silly question, get dressed and go to work!'
     else
       @answer = 'I don\'t care, get dressed and go to work!'
